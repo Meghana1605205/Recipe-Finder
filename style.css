@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #d65108;
+    --primary-dark: #b54507;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* General */
+.btn{
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.container{
+    min-height: 100vh;
+    padding: 2rem;
+}
+.text{
+    opacity: 0.8;
+}
+
+/* Search section */
+.meal-wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+.meal-search{
+    margin: 2rem 0;
+}
+.meal-search-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+#search-input{
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 25px 0 0 25px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+#search-input::placeholder{
+    color: var(--primary-color);
+}
+#search-btn{
+    width: 55px;
+    height: 55px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+#search-btn:hover{
+    background: var(--primary-dark);
+}
+
+/* Meal result */
+#meal{
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.meal-card{
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    background: #fff;
+    text-align: center;
+}
+.meal-card-img img{
+    width: 100%;
+    display: block;
+}
+.meal-card-name{
+    padding: 1rem;
+}
+.meal-card-name h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.recipe-btn{
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.recipe-btn:hover{
+    background: var(--primary-dark);
+}
+
+/* Modal */
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    height: 90%;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 15px;
+    overflow-y: auto;
+    display: none;
+    padding: 2rem;
+}
+.showRecipe{
+    display: block;
+}
+.meal-details::-webkit-scrollbar{
+    width: 10px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+    border-radius: 25px;
+}
+.recipe-close-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.recipe-title{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.recipe-category{
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+.recipe-instruct{
+    margin: 1rem 0;
+}
+.recipe-meal-img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 1rem auto;
+}
+.recipe-link a{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+
+/* Not found message */
+.notFound{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media screen and (min-width: 600px){
+    .meal-search-box{
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 768px){
+    #meal{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
