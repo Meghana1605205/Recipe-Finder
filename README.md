@@ -28,7 +28,5 @@ This project uses **TheMealDB API** to fetch recipes, instructions, and related 
 - [W3Schools HTML, CSS, JS](https://www.w3schools.com/)  
 - [MDN Web Docs – Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)  
 
----
 
-### 👩‍💻 Author
-*Your Name*  
+  
